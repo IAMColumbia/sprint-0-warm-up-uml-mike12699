@@ -10,6 +10,88 @@ namespace Sprint_0_Warm_Up_Final
     {
         public void Test()
         {
+            //AirportTester();
+            AirplaneTest();
+            ToyPlaneTest();
+            HelicopterTest();
+            DroneTester();
+            Console.ReadKey();
+        }
+
+        /*public void AirportTester()
+        {
+            Airport ap = new Airport();
+            Console.WriteLine("\nCall ap.AllTakeOff():");
+            Console.WriteLine(ap.AllTakeOff());
+        }*/
+
+        public void HelicopterTest()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Helicopter h = new Helicopter();
+            Console.WriteLine("\n" + h.About());
+            Console.WriteLine("\nCall h.TakeOff() shouldn't take off");
+            Console.WriteLine(h.TakeOff());
+            Console.WriteLine("\nCall h.StartEngine():");
+            h.StartEngine();
+            Console.WriteLine("Call h.TakeOff():");
+            Console.WriteLine(h.TakeOff());
+            Console.WriteLine("\nCall h.FlyUp():");
+            h.FlyUp();
+            Console.WriteLine("\nCall h.FlyUp(7000) Fly up to 8000ft:");
+            h.FlyUp(7000);
+            Console.WriteLine(h.About());
+            Console.WriteLine("Call h.FlyDown(h.CurrentAltitude) this should land");
+            h.FlyDown(h.currentAltitude);
+            Console.WriteLine(h.About());
+            Console.ResetColor();
+        }
+
+        public void DroneTester()
+        {
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Drone d = new Drone();
+            Console.WriteLine("\n" + d.About());
+            Console.WriteLine("\nCall d.TakeOff() shouldn't take off");
+            Console.WriteLine(d.TakeOff());
+            Console.WriteLine("\nCall d.StartEngine():");
+            d.StartEngine();
+            Console.WriteLine("Call d.TakeOff():");
+            Console.WriteLine(d.TakeOff());
+            Console.WriteLine("\nCall d.FlyUp():");
+            d.FlyUp();
+            Console.WriteLine("\nCall d.FlyUp(500) Fly up to 500ft:");
+            d.FlyUp(500);
+            Console.WriteLine(d.About());
+            Console.WriteLine("Call d.FlyDown(d.CurrentAltitude) this should land");
+            d.FlyDown(d.currentAltitude);
+            Console.WriteLine(d.About());
+            Console.ResetColor();
+        }
+
+        public void ToyPlaneTest()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            ToyPlane tp = new ToyPlane();
+            Console.WriteLine("\n" + tp.About());
+            Console.WriteLine("\nCall tp.TakeOff() shouldn't take off");
+            Console.WriteLine(tp.TakeOff());
+            Console.WriteLine("\nCall tp.StartEngine():");
+            tp.StartEngine();
+            Console.WriteLine("Call tp.TakeOff():");
+            Console.WriteLine(tp.TakeOff());
+            Console.WriteLine("\nCall tp.WindUp():");
+            tp.WindUp();
+            Console.WriteLine("Call tp.StartEngine():");
+            tp.StartEngine();
+            Console.WriteLine("Call tp.TakeOff():");
+            Console.WriteLine(tp.TakeOff());
+            Console.ResetColor();
+        }
+
+        public void AirplaneTest()
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Flying Vehicle Tester......................................................");
             Console.WriteLine("\nAirlplane.cs...............................................................");
 
@@ -63,7 +145,7 @@ namespace Sprint_0_Warm_Up_Final
             Console.WriteLine("Call ap.FlyDown(ap.CurrentAltitude) this should land");
             ap.FlyDown(ap.currentAltitude); //Land by flying down current altitiute
             Console.WriteLine(ap.About());
-            Console.ReadKey();
+            Console.ResetColor();
         }
     }
 }
