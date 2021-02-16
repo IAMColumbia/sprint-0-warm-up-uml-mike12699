@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sprint_0_Warm_Up_Final
+namespace Sprint1
 {
     public abstract class AerialVehicle
     {
@@ -20,7 +20,7 @@ namespace Sprint_0_Warm_Up_Final
             this.engine = new Engine();
         }
 
-        protected string GetEngineString()
+        public string GetEngineString()
         {
             return this.engine.About();
         }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sprint_0_Warm_Up_Final
+namespace Sprint1
 {
     public class Airplane : AerialVehicle
     {

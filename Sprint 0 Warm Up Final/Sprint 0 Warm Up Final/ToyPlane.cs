@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sprint_0_Warm_Up_Final
+namespace Sprint1
 {
-    class ToyPlane : Airplane
+    public class ToyPlane : Airplane
     {
-        protected bool woundUp;
+        public bool woundUp;
 
         public ToyPlane()
         {
@@ -43,7 +43,7 @@ namespace Sprint_0_Warm_Up_Final
             this.woundUp = false;
         }
 
-        protected string WindUpString()
+        public string WindUpString()
         {
             string isWoundUp = "Not wound up";
             if (woundUp) isWoundUp = isWoundUp.Replace("not ", "");
